@@ -1,5 +1,6 @@
 <?php
     require_once('lib/replyMsg.class.php');
+    require_once ('vendor/autoload.php');
 
     $message['type'] = "text";
     $message['text'] = "#こんばんは";
