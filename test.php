@@ -20,7 +20,7 @@
 
     $cache = new Instagram\Storage\CacheManager('/path/to/your/cache/folder');
     $api   = new Instagram\Api($cache);
-    $api->setUserName('chairedevil');
+    $api->setUserName('jpanpanpan');
 
     $feed = $api->getFeed();
 
