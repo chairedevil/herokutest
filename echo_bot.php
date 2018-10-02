@@ -29,12 +29,14 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
+                    $GT = NEW GoogleTranslate();
+                    $response = $GT->translate('ja','en', $message['text']);
                     $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => $message['text']
+                                'text' => $response
                             )
                         )
                     ));
