@@ -6,5 +6,11 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Stichoza\\GoogleTranslate\\' => array($vendorDir . '/stichoza/google-translate-php/src/Stichoza/GoogleTranslate'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'LINE\\' => array($vendorDir . '/linecorp/line-bot-sdk/src'),
+    'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
+    'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
+    'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
+    'Dejurin\\' => array($vendorDir . '/dejurin/php-google-translate-for-free/src'),
 );

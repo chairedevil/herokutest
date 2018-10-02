@@ -1,5 +1,7 @@
 {
     "require": {
-        "linecorp/line-bot-sdk": "^3.3"
+        "linecorp/line-bot-sdk": "^3.3",
+        "stichoza/google-translate-php": "^3.2",
+        "dejurin/php-google-translate-for-free": "^1.0"
     }
 }
