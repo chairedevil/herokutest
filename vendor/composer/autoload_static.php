@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5af03f6a5145994cab318ea960e519d7
+class ComposerStaticInit3972d896b7e4ee462caa0a3f8098cdc7
 {
     public static $files = array (
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
@@ -13,10 +13,6 @@ class ComposerStaticInit5af03f6a5145994cab318ea960e519d7
     );
 
     public static $prefixLengthsPsr4 = array (
-        'S' => 
-        array (
-            'Stichoza\\GoogleTranslate\\' => 25,
-        ),
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
@@ -24,6 +20,10 @@ class ComposerStaticInit5af03f6a5145994cab318ea960e519d7
         'L' => 
         array (
             'LINE\\' => 5,
+        ),
+        'I' => 
+        array (
+            'Instagram\\' => 10,
         ),
         'G' => 
         array (
@@ -38,10 +38,6 @@ class ComposerStaticInit5af03f6a5145994cab318ea960e519d7
     );
 
     public static $prefixDirsPsr4 = array (
-        'Stichoza\\GoogleTranslate\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/stichoza/google-translate-php/src/Stichoza/GoogleTranslate',
-        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
@@ -49,6 +45,10 @@ class ComposerStaticInit5af03f6a5145994cab318ea960e519d7
         'LINE\\' => 
         array (
             0 => __DIR__ . '/..' . '/linecorp/line-bot-sdk/src',
+        ),
+        'Instagram\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pgrimaud/instagram-user-feed/src/Instagram',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
@@ -68,22 +68,11 @@ class ComposerStaticInit5af03f6a5145994cab318ea960e519d7
         ),
     );
 
-    public static $prefixesPsr0 = array (
-        'S' => 
-        array (
-            'Stichoza\\GoogleTranslate\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/stichoza/google-translate-php/src',
-            ),
-        ),
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit5af03f6a5145994cab318ea960e519d7::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit5af03f6a5145994cab318ea960e519d7::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit5af03f6a5145994cab318ea960e519d7::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3972d896b7e4ee462caa0a3f8098cdc7::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3972d896b7e4ee462caa0a3f8098cdc7::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
