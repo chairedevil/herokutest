@@ -1,5 +1,6 @@
 <?php
     require_once('lib/replyMsg.class.php');
+    require_once ('vendor/autoload.php');
 
     $message['type'] = "text";
     $message['text'] = "#こんばんは";
@@ -21,6 +22,7 @@
     $cache = new Instagram\Storage\CacheManager('/path/to/your/cache/folder');
     $api   = new Instagram\Api($cache);
     $api->setUserName('pgrimaud');
+
 
     $feed = $api->getFeed();
 
