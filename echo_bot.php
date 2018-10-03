@@ -19,7 +19,7 @@ foreach ($client->parseEvents() as $event) {
                         case '@':
                             $sendMsg = '@';
                         default :
-                            $sendMsg = '分かった' . $message['text'][0];
+                            $sendMsg = '分かった' . $message['text'][0] . 'rev1' . $message['text'];
                     }
                     $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
