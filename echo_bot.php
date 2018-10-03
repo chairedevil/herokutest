@@ -21,10 +21,11 @@ foreach ($client->parseEvents() as $event) {
                             $sendMsg = $rm->translate($tranText);
                             break;
                         case '@':
-                            $sendMsg = '@';
+                            $userId = substr($message['text'], 1);
+                            $sendMsg = $rm->translate($userId);
                             break;
                         default :
-                            $sendMsg = '分かった(' . $inputText . ') rev7';
+                            $sendMsg = '分かった(' . $inputText . ') rev8';
                             break;
                     }
                     $client->replyMessage(array(
