@@ -22,10 +22,10 @@ foreach ($client->parseEvents() as $event) {
                             break;
                         case '@':
                             $userId = substr($message['text'], 1);
-                            $sendMsg = $rm->translate($userId);
+                            $sendMsg = $rm->getLastInstra($userId);
                             break;
                         default :
-                            $sendMsg = '分かった(' . $inputText . ') rev8';
+                            $sendMsg = '分かった(' . $inputText . ') rev9';
                             break;
                     }
                     $client->replyMessage(array(
