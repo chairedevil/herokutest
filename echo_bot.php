@@ -25,7 +25,7 @@ foreach ($client->parseEvents() as $event) {
                             $sendMsg = $rm->getLastInstra($userId);
                             break;
                         default :
-                            $sendMsg = '分かった(' . $inputText . ') rev12';
+                            $sendMsg = '分かった(' . $inputText . ') rev13';
                             break;
                     }
                     $client->replyMessage(array(
@@ -33,7 +33,8 @@ foreach ($client->parseEvents() as $event) {
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => $sendMsg
+                                'text' => $sendMsg,
+                                'text' => 'chai'
                             )
                         )
                     ));
