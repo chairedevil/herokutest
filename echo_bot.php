@@ -13,7 +13,7 @@ foreach ($client->parseEvents() as $event) {
 
             switch ($message['type']) {
                 case 'text':
-                    switch($message['text'][0]){
+                    switch(parse_str($message['text'][0])){
                         case '#':
                             $sendMsg = '#';
                             break;
@@ -21,7 +21,7 @@ foreach ($client->parseEvents() as $event) {
                             $sendMsg = '@';
                             break;
                         default :
-                            $sendMsg = '分かった' . $message['text'][0] . 'rev2';
+                            $sendMsg = '分かった(' . $message['text'][0] . ')rev2';
                             break;
                     }
                     $client->replyMessage(array(
