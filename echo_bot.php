@@ -16,10 +16,13 @@ foreach ($client->parseEvents() as $event) {
                     switch($message['text'][0]){
                         case '#':
                             $sendMsg = '#';
+                            break;
                         case '@':
                             $sendMsg = '@';
+                            break;
                         default :
-                            $sendMsg = '分かった' . $message['text'][0] . 'rev1' . $message['text'];
+                            $sendMsg = '分かった' . $message['text'][0] . 'rev2';
+                            break;
                     }
                     $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
