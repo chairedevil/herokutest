@@ -57,10 +57,10 @@
             echo '<pre>';
             print_r($feed->getMedias()[0]);
             echo '</pre>';
-            echo '<pre>';
+            echo '2<pre>';
             print_r($feed->getMedias()[0]->getThumbnailSrc());
             echo '</pre>';
-            echo '<pre>';
+            echo '3<pre>';
             print_r($feed->getMedias()[0]['thumbnailSrc']);
             echo '</pre>';
                 //echo 'ID        : ' . $media->getId() . "<br>";
