@@ -13,41 +13,16 @@ foreach ($client->parseEvents() as $event) {
 
             switch ($message['type']) {
                 case 'text':
-                    switch($message['text'][0]){
-                        case '#':
-                            $client->replyMessage(array(
-                                'replyToken' => $event['replyToken'],
-                                'messages' => array(
-                                    array(
-                                        'type' => 'text',
-                                        'text' => "translate"
-                                    )
-                                )
-                            ));
-                            break;
-                        case '@':
-                            $client->replyMessage(array(
-                                'replyToken' => $event['replyToken'],
-                                'messages' => array(
-                                    array(
-                                        'type' => 'text',
-                                        'text' => "instagram"
-                                    )
-                                )
-                            ));
-                            break;
-                        defalut :
-                            $client->replyMessage(array(
-                                'replyToken' => $event['replyToken'],
-                                'messages' => array(
-                                    array(
-                                        'type' => 'text',
-                                        'text' => "ラインボットですよ。"
-                                    )
-                                )
-                            ));
-                            break;
-                    }
+                    $client->replyMessage(array(
+                        'replyToken' => $event['replyToken'],
+                        'messages' => array(
+                            array(
+                                'type' => 'text',
+                                'text' => '分かった'
+                            )
+                        )
+                    ));
+                    break;
                 default:
                     error_log("Unsupporeted message type: " . $message['type']);
                     break;
