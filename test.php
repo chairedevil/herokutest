@@ -28,7 +28,7 @@
         if($message['type'] == "text"){
 
             echo $rm->gen($message['text']);
-            echo "<br>rev 9<br>";
+            echo "<br>rev 10<br>";
 
         }
 
@@ -54,13 +54,13 @@
             echo 'Medias first page : ' . "<br>";
             echo '============================' . "<br><br>";
             /** @var \Instagram\Hydrator\Component\Media $media */
-            $media = $feed->getMedias();
-                echo 'ID        : ' . $media->getId() . "<br>";
-                echo 'Caption   : ' . $media->getCaption() . "<br>";
-                echo 'Link      : <img src="' . $media->getThumbnailSrc() . '"><br>';
-                echo 'Likes     : ' . $media->getLikes() . "<br>";
-                echo 'Date      : ' . $media->getDate()->format('Y-m-d h:i:s') . "<br>";
-                echo '============================' . "<br>";
+            print_r($feed);
+                //echo 'ID        : ' . $media->getId() . "<br>";
+                //echo 'Caption   : ' . $media->getCaption() . "<br>";
+                //echo 'Link      : <img src="' . $media->getThumbnailSrc() . '"><br>';
+                //echo 'Likes     : ' . $media->getLikes() . "<br>";
+                //echo 'Date      : ' . $media->getDate()->format('Y-m-d h:i:s') . "<br>";
+                //echo '============================' . "<br>";
             
 
         } catch (Exception $exception) {
