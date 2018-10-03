@@ -28,7 +28,7 @@
         if($message['type'] == "text"){
 
             echo $rm->gen($message['text']);
-            echo "<br>rev 15<br>";
+            echo "<br>rev 16<br>";
 
         }
 
@@ -57,9 +57,15 @@
             echo '<pre>';
             print_r($feed->getMedias()[0]);
             echo '</pre>';
+            echo '<pre>';
+            print_r($feed->getMedias()[0]->getThumbnailSrc());
+            echo '</pre>';
+            echo '<pre>';
+            print_r($feed->getMedias()[0]['thumbnailSrc']);
+            echo '</pre>';
                 //echo 'ID        : ' . $media->getId() . "<br>";
                 //echo 'Caption   : ' . $media->getCaption() . "<br>";
-            echo 'Link      : <img src="' . $feed->getMedias()[0]['thumbnailSrc'] . '"><br>';
+                //echo 'Link      : <img src="' . $feed->getMedias()[0]['thumbnailSrc'] . '"><br>';
                 //echo 'Likes     : ' . $media->getLikes() . "<br>";
                 //echo 'Date      : ' . $media->getDate()->format('Y-m-d h:i:s') . "<br>";
                 //echo '============================' . "<br>";
