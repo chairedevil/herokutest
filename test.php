@@ -28,7 +28,7 @@
         if($message['type'] == "text"){
 
             echo $rm->gen($message['text']);
-            echo "<br>rev 5<br>";
+            echo "<br>rev 6<br>";
 
         }
 
