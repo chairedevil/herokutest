@@ -28,7 +28,7 @@
         if($message['type'] == "text"){
 
             echo $rm->gen($message['text']);
-            echo "<br>rev 10<br>";
+            echo "<br>rev 11<br>";
 
         }
 
@@ -54,7 +54,9 @@
             echo 'Medias first page : ' . "<br>";
             echo '============================' . "<br><br>";
             /** @var \Instagram\Hydrator\Component\Media $media */
+            echo '<pre>';
             print_r($feed);
+            echo '</pre>';
                 //echo 'ID        : ' . $media->getId() . "<br>";
                 //echo 'Caption   : ' . $media->getCaption() . "<br>";
                 //echo 'Link      : <img src="' . $media->getThumbnailSrc() . '"><br>';
