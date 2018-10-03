@@ -4,13 +4,10 @@
 
     class replyMsg
     {
-        public function gen($msg){
+        public function translate($msg){
 
-            if($msg[0] == "#"){
-                $tr = new GoogleTranslateForFree();
-                $tranText = substr($msg, 1);
-                $returnMsg = $tr->translate('ja', 'en', $tranText);
-            }
+            $tr = new GoogleTranslateForFree();
+            $returnMsg = $tr->translate('ja', 'en', $msg);
 
             return $returnMsg;
         }

@@ -14,15 +14,17 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
                     $inputText = $message['text'][0];
+                    $rm = new replyMsg();
                     switch($inputText){
                         case '#':
-                            $sendMsg = '#';
+                            $tranText = substr($msg, 1);
+                            $sendMsg = $rm->translate($tranText);
                             break;
                         case '@':
                             $sendMsg = '@';
                             break;
                         default :
-                            $sendMsg = '分かった(' . $inputText . ') rev5';
+                            $sendMsg = '分かった(' . $inputText . ') rev6';
                             break;
                     }
                     $client->replyMessage(array(
