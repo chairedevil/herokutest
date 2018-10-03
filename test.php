@@ -2,8 +2,7 @@
     require_once('lib/replyMsg.class.php');
     require_once ('vendor/autoload.php');
 
-    $message['type'] = "text";
-    $message['text'] = "#こんばんは";
+    $message['text'] = "こんばんは";
 
     //echo "<pre>";
     //print_r($message);
@@ -25,12 +24,9 @@
 <body>
     <?php
 
-        if($message['type'] == "text"){
+        echo $rm->translate($message['text']);
+        echo "<br>rev 18<br>";
 
-            echo $rm->gen($message['text']);
-            echo "<br>rev 17<br>";
-
-        }
 
         $cache = new Instagram\Storage\CacheManager('instragram_cache');
 
@@ -59,9 +55,6 @@
             echo '</pre>';
             echo '2<pre>';
             print_r($feed->getMedias()[0]->getThumbnailSrc());
-            echo '</pre>';
-            echo '3<pre>';
-            print_r($feed->getMedias()[0]['thumbnailSrc']);
             echo '</pre>';
                 //echo 'ID        : ' . $media->getId() . "<br>";
                 //echo 'Caption   : ' . $media->getCaption() . "<br>";
