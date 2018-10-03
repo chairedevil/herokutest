@@ -28,16 +28,23 @@ foreach ($client->parseEvents() as $event) {
                         case '@':
                             $userId = substr($message['text'], 1);
                             $img = $rm->getLastInstra($userId);
-                            $msgAry = array(
+                            /*$msgAry = array(
                                 array(
                                     'type' => 'image',
                                     'originalContentUrl' => $img['imgSrc'],
                                     'previewImageUrl' => $img['thumSrc']
                                 )
                             );
+                            */
+                            $msgAry = array(
+                                array(
+                                    'type' => 'text',
+                                    'text' => $img['imgSrc']
+                                )
+                            );
                             break;
                         default :
-                            $sendMsg = '分かった(' . $inputText . ') rev18';
+                            $sendMsg = '分かった(' . $inputText . ') rev19';
                             $msgAry = array(
                                 array(
                                     'type' => 'text',
