@@ -57,7 +57,7 @@
             if ($media = $feed->getMedias()) {
                 echo 'ID        : ' . $media->getId() . "<br>";
                 echo 'Caption   : ' . $media->getCaption() . "<br>";
-                echo 'Link      : ' . $media->getLink() . "<br>";
+                echo 'Link      : ' . $media->getThumbnailSrc() . "<br>";
                 echo 'Likes     : ' . $media->getLikes() . "<br>";
                 echo 'Date      : ' . $media->getDate()->format('Y-m-d h:i:s') . "<br>";
                 echo '============================' . "<br>";
