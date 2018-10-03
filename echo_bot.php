@@ -40,21 +40,13 @@ foreach ($client->parseEvents() as $event) {
                         case '#':
                             $tranText = substr($message['text'], 1);
                             $sendMsg = $rm->translate($tranText);
-                            $sendObj = array(
-                                'type' => 'text',
-                                'text' => $sendMsg
-                            );
                             break;
                         case '@':
                             $userId = substr($message['text'], 1);
                             $sendMsg = $rm->getLastInstra($userId);
-                            $sendObj = array(
-                                'type' => 'text',
-                                'text' => $sendMsg
-                            );
                             break;
                         default :
-                            $sendMsg = '分かった(' . $inputText . ') rev10';
+                            $sendMsg = '分かった(' . $inputText . ') rev11';
                             $sendObj = array(
                                 'type' => 'text',
                                 'text' => $sendMsg
@@ -64,7 +56,10 @@ foreach ($client->parseEvents() as $event) {
                     $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
-                            $sendObj
+                            array(
+                                'type' => 'text',
+                                'text' => $sendMsg
+                            )
                         )
                     ));
                     break;
