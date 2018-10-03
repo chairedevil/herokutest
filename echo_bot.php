@@ -22,7 +22,7 @@ foreach ($client->parseEvents() as $event) {
                             $sendMsg = '@';
                             break;
                         default :
-                            $sendMsg = '分かった(' . $message['text'][0] . ')rev4';
+                            $sendMsg = '分かった(' . $inputText . ') rev5';
                             break;
                     }
                     $client->replyMessage(array(
