@@ -28,7 +28,7 @@
         if($message['type'] == "text"){
 
             echo $rm->gen($message['text']);
-            echo "<br>rev3<br>";
+            echo "<br>rev4<br>";
 
         }
 
@@ -36,7 +36,7 @@
 
         $api = new Instagram\Api($cache);
         $api->setUserName('pgrimaud');
-        
+
         try {
             // First page
             /** @var \Instagram\Hydrator\Component\Feed $feed */
