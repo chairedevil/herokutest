@@ -39,12 +39,12 @@ foreach ($client->parseEvents() as $event) {
                             $msgAry = array(
                                 array(
                                     'type' => 'text',
-                                    'text' => $img['imgSrc']
+                                    'text' => 'ins' . $img['imgSrc']
                                 )
                             );
                             break;
                         default :
-                            $sendMsg = '分かった(' . $inputText . ') rev19';
+                            $sendMsg = '分かった(' . $inputText . ') rev20';
                             $msgAry = array(
                                 array(
                                     'type' => 'text',
