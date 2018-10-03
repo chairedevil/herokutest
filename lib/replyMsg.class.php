@@ -9,6 +9,10 @@
             $tr = new GoogleTranslateForFree();
             $returnMsg = $tr->translate('ja', 'en', $msg);
 
+            if($msg == $returnMsg){
+                $returnMsg = $tr->translate('en', 'ja', $msg);
+            }
+
             return $returnMsg;
         }
 
