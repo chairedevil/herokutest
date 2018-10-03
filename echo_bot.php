@@ -30,13 +30,14 @@ foreach ($client->parseEvents() as $event) {
                             $img = $rm->getLastInstra($userId);
                             $msgAry = array(
                                 array(
-                                    'type' => 'text',
-                                    'text' => $img['imgSrc']
+                                    'type' => 'image',
+                                    'originalContentUrl' => $img['imgSrc'],
+                                    'previewImageUrl' => $img['thumSrc']
                                 )
                             );
                             break;
                         default :
-                            $sendMsg = '分かった(' . $inputText . ') rev15';
+                            $sendMsg = '分かった(' . $inputText . ') rev16';
                             $msgAry = array(
                                 array(
                                     'type' => 'text',
