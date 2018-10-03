@@ -31,7 +31,7 @@
         $cache = new Instagram\Storage\CacheManager('instragram_cache');
 
         $api = new Instagram\Api($cache);
-        $api->setUserName('jpanpanpan');
+        $api->setUserName('chairedevil');
 
         try {
 
