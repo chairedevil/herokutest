@@ -22,7 +22,11 @@
             try {
 
                 $feed = $api->getFeed();
-                $imgSrc = $feed->getMedias()[0]->getThumbnailSrc();
+                $thumSrc = $feed->getMedias()[0]->getThumbnailSrc();
+                $imgSrc = $feed->getMedias()[0]->getDisplaySrc();
+                $img = array();
+                $img['thumSrc'] = $thumSrc;
+                $img['imgSrc'] = $imgSrc;
 
             } catch (Exception $exception) {
                 print_r($exception->getMessage());
@@ -31,7 +35,7 @@
             }
 
 
-            return $imgSrc;
+            return $img;
         }
     }
 

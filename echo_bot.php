@@ -18,14 +18,25 @@ foreach ($client->parseEvents() as $event) {
                     switch($inputText){
                         case '#':
                             $tranText = substr($message['text'], 1);
-                            $sendMsg = $rm->translate($tranText);
+                            $msgAry = array(
+                                array(
+                                    'type' => 'text',
+                                    'text' => $rm->translate($tranText)
+                                )
+                            );
                             break;
                         case '@':
                             $userId = substr($message['text'], 1);
-                            $sendMsg = $rm->getLastInstra($userId);
+                            $img = $rm->getLastInstra($userId);
+                            $msgAry = array(
+                                array(
+                                    'type' => 'text',
+                                    'text' => $img['imgSrc']
+                                )
+                            );
                             break;
                         default :
-                            $sendMsg = '分かった(' . $inputText . ') rev14';
+                            $sendMsg = '分かった(' . $inputText . ') rev15';
                             $msgAry = array(
                                 array(
                                     'type' => 'text',
