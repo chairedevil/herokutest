@@ -25,18 +25,18 @@ foreach ($client->parseEvents() as $event) {
                             $sendMsg = $rm->getLastInstra($userId);
                             break;
                         default :
-                            $sendMsg = '分かった(' . $inputText . ') rev13';
+                            $sendMsg = '分かった(' . $inputText . ') rev14';
+                            $msgAry = array(
+                                array(
+                                    'type' => 'text',
+                                    'text' => $sendMsg
+                                )
+                            );
                             break;
                     }
                     $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
-                        'messages' => array(
-                            array(
-                                'type' => 'text',
-                                'text' => $sendMsg,
-                                'text' => 'chai'
-                            )
-                        )
+                        'messages' => $msgAry
                     ));
                     break;
                 default:
