@@ -15,6 +15,7 @@ foreach ($client->parseEvents() as $event) {
                 case 'text':
                     $inputText = $message['text'][0];
                     $rm = new replyMsg();
+
                     switch($inputText){
                         case '#':
                             $tranText = substr($message['text'], 1);
@@ -37,7 +38,8 @@ foreach ($client->parseEvents() as $event) {
                             );
                             break;
                         default :
-                            $sendMsg = '分かった(' . $inputText . ') rev20';
+                            //$sendMsg = '分かった(' . $inputText . ') rev20';
+                            $sendMsg = '... What!?';
                             $msgAry = array(
                                 array(
                                     'type' => 'text',
@@ -46,6 +48,7 @@ foreach ($client->parseEvents() as $event) {
                             );
                             break;
                     }
+
                     $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => $msgAry
