@@ -2,6 +2,7 @@
     "require": {
         "linecorp/line-bot-sdk": "^3.3",
         "dejurin/php-google-translate-for-free": "^1.0",
-        "pgrimaud/instagram-user-feed": "^5.0"
+        "pgrimaud/instagram-user-feed": "^5.0",
+        "detectlanguage/detectlanguage": "^2.2"
     }
 }

@@ -68,11 +68,22 @@ class ComposerStaticInit3972d896b7e4ee462caa0a3f8098cdc7
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'D' => 
+        array (
+            'DetectLanguage' => 
+            array (
+                0 => __DIR__ . '/..' . '/detectlanguage/detectlanguage/lib',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit3972d896b7e4ee462caa0a3f8098cdc7::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit3972d896b7e4ee462caa0a3f8098cdc7::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit3972d896b7e4ee462caa0a3f8098cdc7::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

@@ -1,16 +1,21 @@
 <?php
     require_once ('./vendor/autoload.php');
     use \Dejurin\GoogleTranslateForFree;
+    use \DetectLanguage\DetectLanguage;
 
     class replyMsg
     {
         public function translate($msg){
 
             $tr = new GoogleTranslateForFree();
-            $returnMsg = $tr->translate('ja', 'en', $msg);
+            
+            DetectLanguage::setApiKey("87bd89dad3e829243777382a605b2dc2");
+            $languageCode = DetectLanguage::simpleDetect($msg);
 
-            if($msg == $returnMsg){
-                $returnMsg = $tr->translate('en', 'ja', $msg);
+            if($languageCode == 'ja'){
+                $returnMsg = $tr->translate('ja', 'en', $msg);
+            }else{
+                $returnMsg = $tr->translate('auto', 'ja', $msg);
             }
 
             return $returnMsg;
