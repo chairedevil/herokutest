@@ -39,7 +39,7 @@ foreach ($client->parseEvents() as $event) {
                             break;
                         default :
                             //$sendMsg = '分かった(' . $inputText . ') rev20';
-                            $sendMsg = '... What!?';
+                            //$sendMsg = '... What!?';
                             $msgAry = array(
                                 array(
                                     'type' => 'text',
